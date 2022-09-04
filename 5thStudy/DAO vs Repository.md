@@ -3,9 +3,9 @@
 - “**데이터베이스에 접근하기 위한 로직**”을 관리하기 위한 객체
 - 스프링 데이터 JPA에서 DAO의 개념은 리포지토리가 대체
 
-**DAO vs Repository**
+## **DAO vs Repository**
 
-**DAO 패턴**
+### **DAO 패턴**
 
 1. 데이터 지속성의 추상화 이며 **테이블 중심인 기본 저장소에 더 가까운 것으로 간주된다.**
 2. **데이터베이스 테이블과 일치**하므로 스토리지에서 데이터를 보다 쉽게 전송/검색할 수 있으므로 쿼리를 숨길 수 있다.
@@ -61,7 +61,9 @@ public class UserDaoImpl implements UserDao {
 
 → 하고 있습니다. 또한 `User` 도메인에 대한 데이터 액세스 메커니즘을 제공합니다.
 
-**Repository 패턴**
+---
+
+### **Repository 패턴**
 
 1. DAO에 비해 비즈니스 로직에 더 가까운 더 높은 수준에 있습니다.
 2. Repository도 DAO와 유사하게 데이터를 처리하고 쿼리를 숨깁니다.
@@ -183,7 +185,9 @@ public class UserRepositoryImpl implements UserRepository {
 
 → **리포지토리는 다양한 소스의 데이터에 액세스하기 위해 DAO에 의존합니다** .
 
-**정리**
+---
+
+### **정리**
 
 | DAO | Repository |
 | --- | --- |
