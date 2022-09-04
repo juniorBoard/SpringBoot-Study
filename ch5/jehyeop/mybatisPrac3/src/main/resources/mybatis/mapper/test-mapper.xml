@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mybatisprac.model.dao.MemberDao">
+    <select id="getAllDataList" resultType="com.example.mybatisprac.model.dto.MemberDto">
+        SELECT * FROM memberDto;
+    </select>
+
+    <select id="postData" resultType="com.example.mybatisprac.model.dto.MemberDto">
+        INSERT INTO memberDto (
+            name,
+            age
+        ) VALUES (
+                  #{memberDto.name},
+                  #{memberDto.age}
+                 )
+    </select>
+</mapper>
