@@ -1,9 +1,9 @@
-# DAO (Data Access Object) vs Repository
+# DAO (Data Access Object) 패턴 vs Repository 패턴
 
 - “**데이터베이스에 접근하기 위한 로직**”을 관리하기 위한 객체
 - 스프링 데이터 JPA에서 DAO의 개념은 리포지토리가 대체
 
-## **DAO vs Repository**
+## **DAO 패턴 vs Repository 패턴**
 
 ### **DAO 패턴**
 
