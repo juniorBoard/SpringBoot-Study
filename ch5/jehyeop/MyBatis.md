@@ -14,13 +14,10 @@
 - resultType, resultClass등 Vo를 사용하지 않고 조회결과를 사용자 정의 DTO, MAP 등으로 맵핑하여 사용 할 수 있다.
 - 빠른 개발이 가능하여 생산성이 향상된다.
 
----
-
 ## **Mybatis3 구조**
+![Untitled](https://user-images.githubusercontent.com/90807141/188309138-a8d6f250-7607-4456-89c7-768bec51d9a7.png)
 
-![Untitled](MyBatis%20f91f8df00cb84c8db5a3821035566774/Untitled.png)
-
-![Untitled](MyBatis%20f91f8df00cb84c8db5a3821035566774/Untitled%201.png)
+![Untitled](https://user-images.githubusercontent.com/90807141/188309188-58191e5c-f93c-4d78-8f94-013b6efd6e7a.png)
 
 ### 주요 구성 요소
 
@@ -57,9 +54,9 @@
 
 ### Database Access 하는 순서
 
-![Untitled](MyBatis%20f91f8df00cb84c8db5a3821035566774/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/90807141/188309233-d5e2515b-57fa-403d-b023-dacc6af2ac2e.png)
 
-![Untitled](MyBatis%20f91f8df00cb84c8db5a3821035566774/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/90807141/188309255-a71cbb9b-d4d9-4c91-a3e7-12378f46331e.png)
 
 **[응용 프로그램 시작시 수행되는 프로세스]**
 
@@ -123,7 +120,7 @@
 
 ### Database Access 하는 순서
 
-![Untitled](MyBatis%20f91f8df00cb84c8db5a3821035566774/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/90807141/188309263-57e667bd-36c6-44d3-aa8c-a1bad69cf4f5.png)
 
 **[응용 프로그램 시작시 수행되는 프로세스]**
 
