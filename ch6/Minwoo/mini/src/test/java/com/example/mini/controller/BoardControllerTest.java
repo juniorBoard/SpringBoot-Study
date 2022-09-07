@@ -5,14 +5,16 @@ import com.example.mini.dto.board.BoardResDTO;
 import com.example.mini.dto.board.CreateBoardDTO;
 import com.example.mini.dto.board.UpdateBoardDTO;
 import com.example.mini.service.impl.BoardServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.jpa.mapping.JpaMetamodelMappingContext;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.time.LocalDateTime;
 
@@ -30,17 +32,33 @@ class BoardControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+    @Autowired
+    private WebApplicationContext webApplicationContext;
 
     @MockBean
     BoardServiceImpl boardService;
 
-    private final Long ID = 1L;
-    private final String AUTHOR = "user";
-    private final String TITLE = "Hi";
-    private final String DESCRIPTION = "Nice to meet you";
-    private final LocalDateTime CREATED_TIMESTAMP = LocalDateTime.now();
-    private final int LIKE_0 = 0;
-    private final int LIKE_1 = 1;
+    private static final Long ID = 1L;
+    private static final String AUTHOR = "user";
+    private static final String TITLE = "Hi";
+    private static final String DESCRIPTION = "Nice to meet you";
+    private static final LocalDateTime CREATED_TIMESTAMP = LocalDateTime.now();
+    private static final int LIKE_0 = 0;
+    private static final int LIKE_1 = 1;
+
+    @BeforeEach
+    void setUp() {
+        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+                .alwaysExpect(status().isOk())
+                .alwaysExpect(jsonPath("$.id").exists())
+                .alwaysExpect(jsonPath("$.author").exists())
+                .alwaysExpect(jsonPath("$.title").exists())
+                .alwaysExpect(jsonPath("$.description").exists())
+                .alwaysExpect(jsonPath("$.thumb").exists())
+                .alwaysExpect(jsonPath("$.created_timestamp").exists())
+                .alwaysDo(print())
+                .build();
+    }
 
     @Test
     void getBoard() throws Exception {
@@ -54,15 +72,7 @@ class BoardControllerTest {
 
         given(boardService.getBoard(ID)).willReturn(BoardResDTO.of(givenBoard));
 
-        mockMvc.perform(get("/api/board/" + ID))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.author").exists())
-                .andExpect(jsonPath("$.title").exists())
-                .andExpect(jsonPath("$.description").exists())
-                .andExpect(jsonPath("$.thumb").exists())
-                .andExpect(jsonPath("$.created_timestamp").exists())
-                .andDo(print());
+        mockMvc.perform(get("/api/board/" + ID));
     }
 
     @Test
@@ -91,15 +101,7 @@ class BoardControllerTest {
                                 "\"title\" : \"" + TITLE + "\"," +
                                 "\"description\" : \"" + DESCRIPTION + "\"" +
                                 "}")
-                        .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.author").exists())
-                .andExpect(jsonPath("$.title").exists())
-                .andExpect(jsonPath("$.description").exists())
-                .andExpect(jsonPath("$.thumb").exists())
-                .andExpect(jsonPath("$.created_timestamp").exists())
-                .andDo(print());
+                        .accept(MediaType.APPLICATION_JSON));
     }
 
     @Test
@@ -129,15 +131,7 @@ class BoardControllerTest {
                                         "\"title\" : \"" + UPDATE_TITLE + "\"," +
                                         "\"description\" : \"" + UPDATE_DESCRIPTION + "\"" +
                                         "}")
-                                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.author").exists())
-                .andExpect(jsonPath("$.title").exists())
-                .andExpect(jsonPath("$.description").exists())
-                .andExpect(jsonPath("$.thumb").exists())
-                .andExpect(jsonPath("$.created_timestamp").exists())
-                .andDo(print());
+                                .accept(MediaType.APPLICATION_JSON));
 
     }
 
@@ -158,15 +152,7 @@ class BoardControllerTest {
 
         given(boardService.likeBoard(any(ID.getClass()))).willReturn(BoardResDTO.of(givenBoard));
 
-        mockMvc.perform(put("/api/board/" + ID + "/like"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.author").exists())
-                .andExpect(jsonPath("$.title").exists())
-                .andExpect(jsonPath("$.description").exists())
-                .andExpect(jsonPath("$.thumb").exists())
-                .andExpect(jsonPath("$.created_timestamp").exists())
-                .andDo(print());
+        mockMvc.perform(put("/api/board/" + ID + "/like"));
     }
 
     @Test
@@ -182,14 +168,6 @@ class BoardControllerTest {
 
         given(boardService.unlikeBoard(any(ID.getClass()))).willReturn(BoardResDTO.of(givenBoard));
 
-        mockMvc.perform(put("/api/board/" + ID + "/unlike"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.author").exists())
-                .andExpect(jsonPath("$.title").exists())
-                .andExpect(jsonPath("$.description").exists())
-                .andExpect(jsonPath("$.thumb").exists())
-                .andExpect(jsonPath("$.created_timestamp").exists())
-                .andDo(print());
+        mockMvc.perform(put("/api/board/" + ID + "/unlike"));
     }
 }
