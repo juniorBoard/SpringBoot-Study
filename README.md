@@ -10,3 +10,7 @@
 ### JeHyeop
 + [DAO (Data Access Object) 패턴 vs Repository 패턴](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch5/jehyeop/DAO%20vs%20Repository.md)
 + [MyBatis](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch5/jehyeop/MyBatis.md)
+
+### Soyeon
++ [JPA 동작원리](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch5/Soyeon/JPA%20%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC.md)
++ [MyBatis](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch5/Soyeon/MyBatis.md)
