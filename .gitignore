@@ -15,3 +15,10 @@ gradle-app.setting
 
 # IntelliJ
 .idea
+
+build.gradle
+gradlew.bat
+gradlew
+gradle/
+src/
+out/
