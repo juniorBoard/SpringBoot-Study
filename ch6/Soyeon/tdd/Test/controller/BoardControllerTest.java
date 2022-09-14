@@ -32,13 +32,13 @@ public class BoardControllerTest {
 	private MockMvc mockMvc;
 
 	// BoardController에서 잡고 있는 Bean 객체에 대해 Mock 형태의 객체를 설명해준다.
-	@MockBean BoardServiceImpl boardService;
+	@MockBean
+	BoardServiceImpl boardService;
 
 
 	//http://localhost:8080/registry?boardId={boardId}
 	@Test
-	@DisplayName("데이터 가져오기 테스트")
-	void getRegistry() throws Exception{
+	void getRegistry() throws Exception {
 		given(boardService.getBoard("23")).willReturn(
 				new Board("23", "title", "main", "writer")
 		);
@@ -59,33 +59,33 @@ public class BoardControllerTest {
 
 
 	//http://localhost:8080/registry
-    @Test
-    void postRegistry() throws Exception{
-        given(boardService.saveBoard(any(BoardDto.class)))
-				.willReturn(new Board("23","title", "main", "writer"));
+	@Test
+	void postRegistry() throws Exception {
+		given(boardService.saveBoard(any(BoardDto.class)))
+				.willReturn(new Board("23", "title", "main", "writer"));
 
 		BoardDto boardDto = BoardDto.builder()
 				.boardId("23")
-                .boardTitle("title")
-                .boardMain("main")
-                .boardWriter("writer")
-                .build();
+				.boardTitle("title")
+				.boardMain("main")
+				.boardWriter("writer")
+				.build();
 
-        Gson gson = new Gson(); //google에서 만든 json의 형태를 자유롭게 다룰 수 있는 라이브러리(build.gradle)
+		Gson gson = new Gson(); //google에서 만든 json의 형태를 자유롭게 다룰 수 있는 라이브러리(build.gradle)
 		String content = gson.toJson(boardDto);
-        mockMvc.perform(
-					post("/registry")
-							.content(content)
-							.contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
+		mockMvc.perform(
+				post("/registry")
+						.content(content)
+						.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
 				.andExpect(jsonPath("$.boardId").exists())
 				.andExpect(jsonPath("$.boardTitle").exists())
 				.andExpect(jsonPath("$.boardMain").exists())
 				.andExpect(jsonPath("$.boardWriter").exists())
 				.andDo(print());
 
+		verify(boardService).saveBoard(any(BoardDto.class));
 
-        verify(boardService).saveBoard(any(BoardDto.class));
-    }
+	}
 
 }
