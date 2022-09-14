@@ -12,13 +12,13 @@
 
 ---
 
-기존 코드
+**기존 코드**
 
 BoardService → BoardDto → BoardService → BoardServiceImpl → BoardRepository → Board
 
 <br>
 
-이후 dto 사용 코드 추가
+**이후 dto 사용 코드 추가**
 
 BoardService → CommentDto, RegistryDto → BoardService → BoardServiceImpl → CommentRepository → Comment
 
