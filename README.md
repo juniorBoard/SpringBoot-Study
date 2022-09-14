@@ -18,7 +18,7 @@
 ## Test Code
 
 ### Minwoo
-+ [Test Code](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch6/Minwoo/TestCode.md)
++ [Test Code란](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch6/Minwoo/TestCode.md)
 + [TDD](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch6/Minwoo/TDD.md)
 
 ### Jehyeop
