@@ -1,5 +1,6 @@
 package com.study.serviceImpl;
 
+import com.study.dto.BoardDto;
 import com.study.dto.CommentDto;
 import com.study.dto.RegistryDto;
 import com.study.model.Board;
@@ -33,10 +34,10 @@ class BoardServiceImplTest {
 
 
     @Test
-    public void getBoard(){
+    public void getBoard() {
         //given
         Mockito.when(boardRepository.findAllByBoardId("3"))
-                .thenReturn(new Board("3","title","main","writer"));
+                .thenReturn(new Board("3", "title", "main", "writer"));
 
         Board board = boardService.getBoard("3");
 
@@ -50,18 +51,20 @@ class BoardServiceImplTest {
 
     @Test
     public void postBoard() {
+        Board board = new Board("3", "title", "main", "writer");
+
         //given
-        Mockito.when(boardRepository.save(new Board("3","title","main","writer")))
-                .thenReturn(new Board("3","title","main","writer"));
+        Mockito.when(boardRepository.save(board))
+                .thenReturn(board);
 
-        Board board = boardRepository.save(new Board("3","title","main","writer"));
+        Board boardSave = boardService.saveBoard(new BoardDto("3", "title", "main", "writer"));
 
-        Assertions.assertEquals(board.getBoardId(), "3");
-        Assertions.assertEquals(board.getBoardTitle(), "title");
-        Assertions.assertEquals(board.getBoardMain(), "main");
-        Assertions.assertEquals(board.getBoardWriter(), "writer");
+        Assertions.assertEquals(boardSave.getBoardId(), "3");
+        Assertions.assertEquals(boardSave.getBoardTitle(), "title");
+        Assertions.assertEquals(boardSave.getBoardMain(), "main");
+        Assertions.assertEquals(boardSave.getBoardWriter(), "writer");
 
-        verify(boardRepository).save(new Board("3","title","main","writer"));
+        verify(boardRepository).save(new Board("3", "title", "main", "writer"));
     }
 
 
