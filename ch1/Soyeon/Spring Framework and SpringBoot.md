@@ -28,7 +28,8 @@ Actuator
 
 Spring Boot 는 약간의 설정만으로 Spring 애플리케이션을 만들 수 있게 해준다.
 
-Spring Boot 는 Spring 프로젝트 중 하나로 Spring Framework 를 쉽게 사용하게 해주는 도구이지, Spring Framework 와 별개로 사용할 수 있는 것이 아니다.
+Spring Boot 는 Spring 프로젝트 중 하나로 Spring Framework 를 쉽게 사용하게 해주는 도구이지,               
+Spring Framework 와 별개로 사용할 수 있는 것이 아니다.
 
 <br>
 
