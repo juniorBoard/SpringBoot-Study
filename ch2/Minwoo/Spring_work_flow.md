@@ -12,7 +12,7 @@
 
 ## 동작 방식
 
-이미지
+![스프링_부트_동작_구조_001](https://user-images.githubusercontent.com/77231274/190912457-361379e7-0892-4769-8664-20ac01019867.png)
 
 > 1. Servlet Container가 스프링 Dispatcher Servlet에 클라이언트 요청을 전달.  
 >    (Servlet Container 와 Dispatcher Servlet 사이에 여러 filter 들이 존재.)
