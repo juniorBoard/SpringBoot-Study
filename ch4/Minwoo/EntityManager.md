@@ -15,3 +15,7 @@
 
 ## 영속성 컨텍스트
 + 영속성 컨텍스트는 객체를 보관하는 기능을 수행한다.
+
+<br>
+
+![Persistance_Context_Diagram](https://user-images.githubusercontent.com/77231274/190913195-a9b9cd00-5219-4b1e-8a2c-b72ca06164bc.png)
