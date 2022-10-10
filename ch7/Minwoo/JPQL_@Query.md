@@ -31,6 +31,7 @@ SELECT p FROM Product AS p WHERE p.name = ?1;
 
 ### WHERE
 조회 조건을 정의.
+
 `컬럼 = 값`형식으로 작성.
 
 ## @Query
