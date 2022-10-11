@@ -7,14 +7,15 @@ JPQL ( JPA Query Language) → “JPA에서 사용할 수 있는 쿼리”
 - JPQL : 매핑된 **엔티티의 이름**과 **필드의 이름**을 사용
 
   <JPQL 쿼리의 기본 구조>  
-  [image]
+  <img src="https://user-images.githubusercontent.com/90807141/195055873-c72be455-409a-4445-9331-d5aff1df3c2e.png" width=60%>
   - **SELECT** : 가져오고자 하는 칼럼
   - **FROM** : 엔티티 타입 지정
   - **WHERE** : 조건 지정
 
 ## 쿼리 메서드
-<리포지토리 쿼리 메서드 예시> 
-[image]
+<리포지토리 쿼리 메서드 예시>   
+
+<img src="https://user-images.githubusercontent.com/90807141/195056004-18e99c1c-0c53-4ec7-b255-541a1ae84715.png" width=70%>
 
 ## 주제 키워드
 find…By  
