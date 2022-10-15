@@ -96,3 +96,19 @@
 ### Soyeon
 + [Test Code](https://github.com/juniorBoard/SpringBoot-Study/tree/main/ch6/Soyeon/tdd)
 + [TDD](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch6/Soyeon/TDD.md)
+
+## JPQL, QueryDSL
+
+### Minwoo
++ [JPQL과 _@Query_](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Minwoo/JPQL_%40Query.md)
++ [정렬과 페이징](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Minwoo/Sort_Paging.md)
++ [Code](https://github.com/juniorBoard/SpringBoot-Study/tree/main/ch7/Minwoo/sort_paging) (JPQL, _@Query_, 정렬, 페이징, QueryDSL)
+
+### Jehyeop
++ [JPQL](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Jehyeop/JPQL1(SQL%EB%AC%B8).md)
++ [정렬과 페이징](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Jehyeop/JPQL2(%EC%A0%95%EB%A0%AC%2C%20%ED%8E%98%EC%9D%B4%EC%A7%95).md)
++ [@Query](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Jehyeop/JPQL3(%40Query).md)
++ [QueryDSL](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Jehyeop/JPQL4(QueryDSL).md)
+
+### Soyeon
++ [JPQL, @Query, QueryDSL](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Soyeon/JPQL.md)
