@@ -3,7 +3,6 @@ package com.example.relationship_mapping.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,12 +15,12 @@ public class Team {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @ManyToMany
+    @OneToMany(mappedBy = "team")
     @JsonIgnore
     private List<Member> members = new ArrayList<>();
 
     public void add(Member member) {
-//        member.setTeam(this);
+        member.setTeam(this);
         this.members.add(member);
     }
 }

@@ -17,7 +17,7 @@ public class Member {
     @OneToOne
     @JoinColumn(name = "profile_id")
     private Profile profile;
-//    @ManyToMany
-//    @JoinColumn(name = "team_id")
-//    private Team team;
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
 }
