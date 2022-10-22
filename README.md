@@ -112,3 +112,16 @@
 
 ### Soyeon
 + [JPQL, @Query, QueryDSL](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch7/Soyeon/JPQL.md)
+
+## Relationship Mapping
+
+### Minwoo
++ [연관관계 매핑](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Minwoo/RelationshipMapping.md)
+
+## Spring Security
+
+### Jehyeop
++ [SpringSecurity 동작구조](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Jehyeop/SpringSecurity%20%EB%8F%99%EC%9E%91%EA%B5%AC%EC%A1%B0.md)
++ [Spring Security 인증처리](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Jehyeop/Spring%20Security%20%EC%9D%B8%EC%A6%9D%EC%B2%98%EB%A6%AC.md)
++ [JWT](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Jehyeop/JWT.md)
++ [SecurityFilterChain 보안설정](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Jehyeop/SecurityFilterChain%20%EB%B3%B4%EC%95%88%EC%84%A4%EC%A0%95.md)
