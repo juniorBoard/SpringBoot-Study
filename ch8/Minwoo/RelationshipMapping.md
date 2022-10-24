@@ -7,6 +7,9 @@
 + PK (Primary Key) : 고윳값, 기본 키, 식별 자
 + FK (Foreign Key) : 외래 키, 다른 테이블 레코드의 PK값을 참조한 값
 
+### ERD (Entity Relationship Diagram) 예시
+![ERD](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Minwoo/DB_Diagram.png)
+
 ## 연관관계 매핑 종류
 
 + OneToOne (1대1)
@@ -144,10 +147,10 @@ LAZY 로딩 시에 쿼리문이 자주 날아가는게 문제가 될 수도 있�
 
 ### 다대다 매핑
 
-![Untitled](https://github.com/juniorBoard/SpringBoot-Study/tree/main/ch8/Minwoo/mapping01.png)
+![mapping01.png](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Minwoo/mapping01.png)
 
 다대다 매핑의 경우 교차 엔티티라고 부르는 중간 테이블을 생성해서 다대다 관계를 일대다 관계로 나눠 관리한다.
 
-![Untitled](https://github.com/juniorBoard/SpringBoot-Study/tree/main/ch8/Minwoo/mapping02.png)
+![mapping02.png](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Minwoo/mapping02.png)
 
-![Untitled](https://github.com/juniorBoard/SpringBoot-Study/tree/main/ch8/Minwoo/mapping03.png)
+![mapping03.png](https://github.com/juniorBoard/SpringBoot-Study/blob/main/ch8/Minwoo/mapping03.png)
